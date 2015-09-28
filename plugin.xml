@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="br.com.fullgauge.sitradmobile"
+  version="1.0.6">
+
+	<name>Crypto</name>
+	 
+	<description>
+		Crypto Plugin Description
+	</description>
+	
+	<license>MIT</license>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>  
+
+	<js-module src="www/Crypto.js" name="Crypto">
+		<clobbers target="cordova.plugins.Crypto" />
+	</js-module>
+
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="Crypto">
+				<param name="android-package" value="br.com.fullgauge.sitradmobile.Crypto"/>
+			</feature>
+		</config-file>
+	
+		<source-file src="src/android/Crypto.java" target-dir="src/br/com/fullgauge/sitradmobile" />
+		<source-file src="src/android/Base64.java" target-dir="src/br/com/fullgauge/sitradmobile" />
+		<source-file src="src/android/FgCrypto.java" target-dir="src/br/com/fullgauge/sitradmobile" />
+	</platform>
+</plugin>
