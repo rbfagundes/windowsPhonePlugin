@@ -9,10 +9,6 @@
 	
 	<license>MIT</license>
 
-	<engines>
-		<engine name="cordova" version=">=3.0.0" />
-	</engines>  
-
 	<js-module src="www/Crypto.js" name="Crypto">
 		<clobbers target="Crypto" />
 	</js-module>
